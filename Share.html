@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مشاركة</title>
+    <style>
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f8fa;
+    color: #333;
+    padding: 10px;
+}
+
+textarea {
+    width: 100%;
+    margin: 5px 0;
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+}
+
+#SharedText {
+    height: 200px;
+    margin-bottom: 10px; /* Reduced space below the shared text box */
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 3px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+}
+
+.toggle-content {
+    display: none;
+    margin: 5px 0;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #eaf2f8;
+}
+
+textarea + p {
+    margin-top: 5px; /* Reduced space between text areas and preceding text */
+}
+
+p + textarea {
+    margin-top: 3px; /* Reduced space between paragraph and textarea */
+}
+    </style>
+</head>
+<body>
+<h2 style="text-align: center;">👥🗣 اناقشها مع شخص ما فوراً</h2>
+
+    <!-- First Text Box -->
+    <textarea id="textbox1" style="font-size: 0.8rem; line-height: 1; height: 10px">شكرا ليك انك متاح🙏🏻. انا .... مدمن متعافي. حابب اشاركك:</textarea>
+    
+    <!-- Second Text Box -->
+    <textarea id="SharedText" placeholder="سيظهر هنا ما تم جرده..." style="font-size: 0.7rem;"></textarea>
+    <div style="text-align: center; margin-top: 10px;">
+    <button onclick="goBackToGART()">هل ترغب في جرد موقف آخر؟ 🔄</button>
+</div>
+    <!-- Section 1 -->
+    <section>
+        <p><strong>🤝ثم بعزم أوجه أفكاري إلى شخص ما يمكنني أن اساعده . </strong>🤝سأساعد بأني:</p>
+<textarea id="help-text" placeholder="اكتب هنا من وكيف ستساعد..." style="font-size: 0.8rem; line-height: 1; height: 10px;"></textarea>
+    </section>
+
+    <!-- Section 2 -->
+<section>
+    <p><strong>🩵إن حب الآخرين وتقبلهم هو ميثاقي.</strong>🩵سأحب و اتقبل باني:</p>
+    <textarea id="acceptance-text" placeholder="الآن أو في هذا لموقف، كيف تتفبل ما ترفضه في الآخرين و كيف تحب ما يعجبك فيهم؟" style="font-size: 0.8rem; line-height: 1; height: 10px"></textarea>
+    <p style="font-size: 0.7rem; margin-top: 5px; line-height: 1.2;">
+        <a href="index.html">اذا كان هناك ما لا تحبه او تقبله الآن و لم تجرده، فيمكنك ان تجرده الآن</a>
+    </p>
+</section>
+
+<!-- Section 3 -->
+<section>
+    <p><strong>🕊️🚫 ولقد توقفت عن قتال أي شيء أو أي شخص.</strong> 
+    اترك كل شيء لربنا و ثق به و لا تفكر في مشكلتك او ما جردت، فكر فقط في الله و كيف تخدمه يما يمكنك الآن.
+    <a href="javascript:void(0)" onclick="toggleContent('content-1')">ممكن أقرا:</a>
+    </p>
+    <p style="font-size: 0.7rem; margin-top: 5px; line-height: 1.2;">
+      <a href="index.html">اذا كان هناك الآن ما اصارعه في عقلي و روحي و لم تجرده، فيمكنك ان تجرده الآن</a>
+    </p>
+    <div id="content-1" class="toggle-content">حيث إنه ببلوغي هذه المرحلة، سيكون الرشد قد عاد. نادراً ما سأهتم بالتصرفات الجنسية. لو تم إغرائي، سأنفر من الإغراء كما أنفر من شعلة ساخنة. أنا سأستجيب برشد و بطبيعية، و سأجد أن هذا قد حدث تلقائياً. سأري أن سلوكي الجديد تجاه التصرفات الجنسية قد أعطي لي بدون أي تفكير أو مجهود من جانبي. إنه فقط يأتي! تلك هي معجزة الأمر. أنا لا أحارب الأمر، و لا انا أتجنب الإغراء. أشعر كأنني وُضعت في مكان من الحيادية-آمن ومحمي. أنا حتى لم أُقْسِم على أن أًبطِّل. بدلاً من ذلك، أزيلت المشكلة. إنها لا توجد لدي. أنا لست مغروراً و لا أنا خائف. تلك هي تجربتي. هكذا أستجيب ما دمت أحافظ علي حالة اللياقة الروحانية.
+    </div>
+</section>
+
+<!-- Section 4 -->
+<section>
+    <p><strong>💐🌹 
+        كل يوم هو يوم لابد أن أحمل رؤية مشيئة الرب في كل أعمالي.</strong> 
+        أفكر نفسي بده (أكرره جوايا -خ١/٢/٣). ما أفكرش في اللي حصل.
+        <a href="javascript:void(0)" onclick="toggleContent('content-2')">ممكن اقرأ:</a>
+    </p>
+    <div id="content-2" class="toggle-content">إنه من السهل أن أتهاون في برنامج العمل الروحاني و أكتفي بما حققته. أنا متجه إلى مَشَقَّة لو فعلت ذلك، حيث إن التصرفات الادمانية الجنسية خصم ماكر. أنا لم أٌشف من مرض إدمان التصرفات الجنسية. ما أمتلكه حقاً هو إيقاف بالتنفيذ يومي مشروط بالحفاظ على حالتي الروحانية. كل يوم هو يوم لابد أن أحمل رؤية مشيئة الرب في كل أعمالي. "كيف يمكنني أن أخدمك بأفضل شكل--لتكن مشيئتك (وليست مشيئتي)" هذه أفكار لابد أن تسير معي باستمرار. يمكنني أن أمارس قوة مشيئتي على طول هذا الخط بكل ما أتمنى. ذلك هو الاستخدام المناسب للمشيئة.
+    </div>
+</section>
+
+<!-- Third Text Box -->
+<textarea id="textbox3" style="font-size: 0.8rem; line-height: 1; height: 10px; margin-top: 5px;">هل فيه حاجة ممكن تضيفها لجردي؟ هل شايف ممكن اصلح بشكل مختلف؟...</textarea>
+
+<!-- Button Group -->
+<div class="button-group">
+    <button onclick="shareText()">نسخ الي الحافظة📋</button>
+    <button onclick="openWhatsApp()">واتساب 📲</button>
+    <button onclick="resetFields()">مسح كل ما تمت كتابته 🗑️</button>
+</div>
+  <script>
+    function toggleContent(id) {
+        const content = document.getElementById(id);
+        if (content) {
+            console.log(`Toggling content for id: ${id}`);
+            if (content.style.display === 'none' || content.style.display === '') {
+                content.style.display = 'block'; // Show content
+                console.log(`Content for id: ${id} is now visible.`);
+            } else {
+                content.style.display = 'none'; // Hide content
+                console.log(`Content for id: ${id} is now hidden.`);
+            }
+        } else {
+            console.error(`Element with id "${id}" not found.`);
+        }
+    }
+
+   function shareText() {
+    const textbox1 = document.getElementById('textbox1');
+    const sharedText = document.getElementById('SharedText');
+    const textbox2 = document.getElementById('help-text');
+    const textbox3 = document.getElementById('acceptance-text');
+    const textbox4 = document.getElementById('textbox3');
+
+    const combinedText = `${textbox1.value}\n${sharedText.value}\n🤝سأساعد بأني:${textbox2.value}\n🩵سأحب و أتقبل بأني: ${textbox3.value}\n${textbox4.value}`;
+
+    navigator.clipboard.writeText(combinedText)
+        .then(() => {
+            showTemporaryMessage('تم النسخ إلى الحافظة!', 2000);
+        })
+        .catch(err => {
+            showTemporaryMessage('حدث خطأ أثناء النسخ: ' + err.message, 2000);
+        });
+}
+
+function showTemporaryMessage(message, duration) {
+    const messageBox = document.createElement('div');
+    messageBox.textContent = message;
+    messageBox.style.position = 'fixed';
+    messageBox.style.bottom = '10px';
+    messageBox.style.left = '50%';
+    messageBox.style.transform = 'translateX(-50%)';
+    messageBox.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+    messageBox.style.color = '#fff';
+    messageBox.style.padding = '10px 20px';
+    messageBox.style.borderRadius = '5px';
+    messageBox.style.zIndex = '1000';
+    document.body.appendChild(messageBox);
+
+    setTimeout(() => {
+        document.body.removeChild(messageBox);
+    }, duration);
+}
+
+
+    function openWhatsApp() {
+        const textbox1 = document.getElementById('textbox1');
+        const sharedText = document.getElementById('SharedText');
+        const textbox2 = document.getElementById ('help-text')
+        const textbox3 = document.getElementById ('acceptance-text')
+        const textbox4 = document.getElementById('textbox3');
+      
+        const combinedText = `${textbox1.value}\n${sharedText.value}\n ${textbox2.value}\n${textbox3.value}\n${textbox4.value}`;
+        const url = `https://wa.me/?text=${encodeURIComponent(combinedText)}`;
+        window.open(url, '_blank');
+    }
+
+    function goBackToGART() {
+        const sharedText = document.getElementById('SharedText').value;
+        localStorage.setItem('sharedText', sharedText);
+        window.location.href = 'index.html';
+    }
+
+    function loadSharedText() {
+        const savedText = localStorage.getItem('sharedText');
+        if (savedText !== null) {
+            document.getElementById('SharedText').value = savedText;
+        }
+    }
+
+    function resetFields() {
+    const confirmation = confirm('❌ سيتم مسح كل ما تمت اضافته. هل انت متأكد؟');
+    if (confirmation) {
+        document.getElementById('SharedText').value = '';
+        document.getElementById('help-text').value = '';
+        document.getElementById('acceptance-text').value = '';
+        localStorage.clear();
+        alert('تم مسح كل ما تمت اضافته!');
+    }
+}
+
+    window.onload = loadSharedText;
+</script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>😱خايف؟</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h1>😱خايف؟</h1>
+  <label for="fear-person">خايف من ايه؟</label>
+  <textarea id="fear-person" style="font-size: 0.8rem; line-height: 1; height: 10px" placeholder="ايه اللي انت قلقان من حدوثه"></textarea>
+
+  <label for="fear-reason"> اليس بسبب ان الاعتماد علي الأنا قد خذلنا؟</label>
+  <textarea id="fear-reason" style="font-size: 0.8rem; line-height: 1; height: 10px" placeholder="انا عايزني اكون ازاي عشان اقدر اتعامل مع الخوف او الموقف ده"></textarea>
+
+  <label for="self-confidence">كيف تحاول ان تثق بنفسك؟</label>
+  <textarea id="self-confidence" style="font-size: 0.8rem; line-height: 1; height: 17px" placeholder="ايه اللي انا واثق اني اقدر اعمله (جوة حدودي) و ايه اللي انا مش واثق اني اقدر اعمله (برة حدودي)؟ هل كان فيه غرور؟"></textarea>
+
+  <h3 class="subtitle" style="text-align: center; color: goldenrod;">
+    عندما تظهر هذه، أسألك يا الله في الحال أن تزيلها. 🙏🌟
+  </h3>
+
+  <p style="font-size: 0.9rem;">
+    أسألك يا رب أن تزيل خوفي من 😱 و أن توجه انتباهي إلى ما ستريدني أن أكونه.
+    "خالقي، أنا الآن لدي العزم علي أنك يجب أن تمتلكني كُلِّي، الصالح و السيء
+    <em style="font-size: 0.9rem;">(تخلي عن كل ما كتبت انك متعلق بيه في الأنانية ليكون كما يريد الله حتي لو عكس ما تريد)</em>.
+    أدعو أنك الآن تزيل مني كل عيب شخصي 😎🤥 يقف في طريق نفعي لك و لرفاقي. امنحني القوة، عندما أخرج من هنا، للقيام بما تأمرني به. آمين."
+  </p>
+
+  <div>
+     <button onclick="addAndRedirect('Share.html')" style="width: 80px; height: 50px; background-color: green; color: white; font-size: 1rem; border: none; border-radius: 5px; text-align: center;">
+   التالي⏭️
+ </button>
+    <button onclick="addAndRedirect('index.html')" style="width: 150px; height: 50px; background-color: green; color: white; font-size: 1rem; border: none; border-radius: 5px; text-align: center;">
+      جرد موقف تاني🔁
+    </button>
+  </div>
+<script>
+function addAndRedirect(redirectUrl) {
+  // Retrieve input from all textareas
+  const fearPersonText = document.getElementById('fear-person').value.trim();
+  const fearReasonText = document.getElementById('fear-reason').value.trim();
+  const selfConfidenceText = document.getElementById('self-confidence').value.trim();
+
+  // Check if at least one textarea is filled
+  if (fearPersonText || fearReasonText || selfConfidenceText) {
+    // Retrieve existing shared text from localStorage
+    let existingText = localStorage.getItem('sharedText') || ""; // Ensure consistent casing: 'SharedText'
+
+    // Append new input to existing text with formatting
+    const newText = `😱انا خايف من: ${fearPersonText}.\n😱انا عاوزني اكون: ${fearReasonText}.\n😱ايه جوة وايه برة حدودي: ${selfConfidenceText}`.trim();
+
+    // Add a separator if there's existing text
+    existingText = existingText ? `${existingText}\n\n---\n\n${newText}` : newText;
+
+    // Save the updated text to localStorage
+    localStorage.setItem('sharedText', existingText); // Keep key consistent
+  }
+
+  // Redirect to the specified URL
+  window.location.href = redirectUrl;
+}
+</script>
+
+</body>
+
+</html>

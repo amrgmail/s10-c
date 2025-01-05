@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>كاذب</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1, h4, h3 {
+      text-align: center;
+    }
+
+    h1 {
+      color: darkblue;
+    }
+
+    h4 {
+      margin-top: 20px;
+      color: darkgreen;
+    }
+
+    .field-container {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      font-size: 0.9rem;
+      margin-bottom: 5px;
+    }
+
+    textarea {
+      width: 100%;
+      max-width: 100%;
+      height: 2em; /* Adjusted height to fit 2 lines */
+      padding: 5px;
+      font-size: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      resize: none;
+    }
+
+    button {
+      width: 30%; /* Reduced size to 30% */
+      padding: 5px 10px; /* Adjusted padding */
+      font-size: 0.8rem; /* Adjusted font size */
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #007bff;
+      color: white;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      color: goldenrod;
+      margin-top: 10px;
+    }
+
+    .content {
+      font-size: 0.9rem;
+      color: darkslategray;
+    }
+
+    .center-buttons {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .center-buttons button {
+      width: auto; /* Allow auto width for centered buttons */
+      height: 50px;
+      background-color: green;
+      color: white;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      text-align: center;
+      margin: 5px; /* Add spacing between buttons */
+    }
+  </style>
+</head>
+
+<body>
+  <h1>اين كنت كاذب؟</h1>
+  <textarea id="lie-field" data-label="🤥انايتي خلتني اكذب:" placeholder=" ما هي الأفكار التي اراها ليست حقيقة ١٠٠٪؟"></textarea>
+  <h4>اين كنت اناني - متعلق ب؟</h4>
+<div id="effects" style="position: sticky; top: 0; background-color: white; z-index: 1000; padding: 10px; box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);">
+  <div style="display: flex; flex-wrap: wrap; gap: 1px;">
+    <div class="field-container" style="flex: 1; min-width: 150px;">
+      <label>🎭قيمتي:</label>
+      <textarea data-label="😎 اناني-متعلق بقيمتي" placeholder="ما اريد ان اكون عليه"></textarea>
+    </div>
+    <div class="field-container" style="flex: 1; min-width: 150px;">
+      <label>👀منظري:</label>
+      <textarea data-label="😎 اناني-متعلق بمنظري" placeholder="ما اريد غيري ان يراني عليه"></textarea>
+    </div>
+    <div class="field-container" style="flex: 1; min-width: 150px;">
+      <label>💰محفظتي:</label>
+      <textarea data-label="😎 اناني-متعلق بمحفظتي" placeholder="ممتلكاتي المادية"></textarea>
+    </div>
+    <div class="field-container" style="flex: 1; min-width: 150px;">
+      <label>🌟اماني:</label>
+      <textarea data-label="😎 اناني-متعلق باماني" placeholder="ما أطمئن بوجوده ماديا او عاطفيا"></textarea>
+    </div>
+    <div class="field-container" style="flex: 1; min-width: 150px;">
+      <label>📅خطتي:</label>
+      <textarea data-label="😎 اناني-متعلق بخطتي" placeholder="ترتيبي للأحداث"></textarea>
+    </div>
+    <div class="field-container" style="flex: 1; min-width: 150px;">
+      <label>👥علاقتي الشخصية:</label>
+      <textarea data-label="😎 اناني-متعلق بعلاقتي الشخصية" placeholder="ما اريد ان يكون غيري عليه"></textarea>
+    </div>
+    <div class="field-container" style="flex: 1; min-width: 150px;">
+      <label>❤️علاقتي الجنسية:</label>
+      <textarea data-label="😎 اناني-متعلق بعلاقتي الجنسية" placeholder="ما اريده للجنس"></textarea>
+    </div>
+  </div>
+</div>
+
+
+  <div id="other-actions">
+    <h4>هل انانيتي خلتني:</h4>
+
+    <div class="field-container">
+      <button onclick="toggleField('ego-field', 'repair-ego-field')">🏃اسعي وراء الأنا؟</button>
+      <textarea id="ego-field" class="hidden" data-label="🏃انايتي خلتني اسعي وراء الأنا:" placeholder="اي قرار او فعل مبني علي انانيتي.."></textarea>
+      <textarea id="repair-ego-field" class="hidden" data-label="❤️‍🩹أقوم بالإصلاحات سريعاً إذا آذيت أحد ما" placeholder="❤️‍🩹اقوم بالاصلاحات سريعاً اذا أذيت أحد ما: كيف سأصلح الموقف؟"></textarea>
+    </div>
+<h3 class="subtitle" style="text-align: center; color: goldenrod; margin-bottom: 1px;"> عندما تظهر هذه، أسألك يا الله في الحال أن تزيلها. 🙏🌟 </h3>
+<p class="content" style="margin-top:">
+  "خالقي، أنا الآن لدي العزم علي أنك يجب أن تمتلكني كُلِّي، الصالح و السيء
+  <em style="font-size: smaller;">(تخلي عن كل ما كتبت انك متعلق بيه في الأنانية ليكون كما يريد الله حتي لو عكس ما تريد)</em>.
+  أدعو أنك الآن تزيل مني كل عيب شخصي 😎🤥🏃 يقف في طريق نفعي لك و لرفاقي. امنحني القوة، عندما أخرج من هنا، للقيام بما تأمرني به. آمين."
+</p>
+    <div class="field-container">
+      <button onclick="toggleField('resentment-field', 'resentment-messages')">😡استاء؟</button>
+      <textarea id="resentment-field" class="hidden" data-label="😡انانيتي خلتني استاء:" placeholder="اي حاجة ضايقتك بسبب ده..."></textarea>
+      <div id="resentment-messages" class="hidden">
+        <h3 class="subtitle">عندما تظهر هذه، أسألك يا الله في الحال أن تزيلها. 🙏🌟</h3>
+        <p class="content">
+          "أسألك يا الله أن تساعدني على أن أظهر ل 😡 نفس التقبل، الشفقة و الصبر الذي كنت سأمنحه بسرور لصديق مريض".<br>
+          "😡 شخص مريض. كيف أكون نافعاً له؟ يا رب أنقذني من الغضب. لتكن مشيئتك."
+        </p>
+      </div>
+    </div>
+
+    <div class="field-container">
+      <button onclick="toggleField('fear-field', 'fear-messages')">😱اخاف؟</button>
+      <textarea id="fear-field" class="hidden" data-label="اخاف؟" placeholder="اي حاجة انت قلقان منها بسبب ده"></textarea>
+      <div id="fear-messages" class="hidden">
+        <h3 class="subtitle">عندما تظهر هذه، أسألك يا الله في الحال أن تزيلها. 🙏🌟</h3>
+        <p>أسألك يا رب أن تزيل خوفي من 😱 و أن توجه انتباهي إلى ما ستريدني أن أكونه.</p>
+      </div>
+    </div>
+
+    <div class="center-buttons">
+      <button onclick="addAndRedirect('Share.html')">التالي⏭️</button>
+      <button onclick="addAndRedirect('index.html')">جرد موقف تاني🔁</button>
+    </div>
+  </div>
+
+  <script>
+    function toggleField(fieldId, messageId) {
+      const field = document.getElementById(fieldId);
+      const message = document.getElementById(messageId);
+
+      if (field) {
+        field.classList.toggle("hidden");
+      }
+      if (message) {
+        message.classList.toggle("hidden");
+      }
+    }
+     function addAndRedirect(targetUrl) {
+       const textareas = document.querySelectorAll("textarea");
+       let collectedData = "";
+
+       textareas.forEach((textarea) => {
+         const label = textarea.getAttribute("data-label");
+         const value = textarea.value.trim();
+
+         if (value) {
+           collectedData += `${label}: ${value}\n`; // Append label and value if not empty
+         }
+       });
+
+       if (collectedData) {
+         // Retrieve existing data from localStorage, if any
+         const existingData = localStorage.getItem("sharedText") || "";
+         // Add a separator if there's existing text
+         const updatedData = existingData ?
+           `${existingData}\n\n---\n\n${collectedData}` :
+           collectedData;
+         // Save updated data to localStorage
+         localStorage.setItem("sharedText", updatedData);
+       } else {
+         alert("No data entered to save.");
+       }
+
+
+       window.location.href = targetUrl; // Redirect to the target page
+     }
+  </script>
+</body>
+
+</html>

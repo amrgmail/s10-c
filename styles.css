@@ -1,0 +1,193 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Tajawal', sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+
+/* Resentment Container (Title and Textarea together) */
+.resentment-container {
+    position: sticky; /* Makes the container sticky on scroll */
+    top: 0; /* Sticks to the top when scrolled to */
+    width: 100%; /* Full width */
+    background-color: #ffffff; /* Prevents content underneath from showing through */
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #ccc; /* Optional border for clarity */
+    z-index: 1000; /* Ensures it stays above other elements */
+    padding: 5px;
+    margin-bottom:10px;
+    text-align: center;
+}
+
+/* Resentment Text Box */
+textarea#resentment {
+    width: 90%; /* Adjusts width to fit within the container */
+    max-width: 500px; /* Maximum width for larger screens */
+    height: 100px;
+    padding: 10px;
+    font-size: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+    margin-top: 10px; /* Adds space between the title and the text box */
+}
+textarea#resentment-person {
+  width:30%;
+  font-size: 0.7rem;
+}
+
+/* Container Styles */
+.container, .slide-container {
+    text-align: center;
+    width: 90%;
+    max-width: 700px;
+    margin: 120px auto 20px; /* Adds space for the fixed resentment box */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Text Styles */
+h1 {
+    font-size: 2.3rem;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    color: #1a141a;
+    font-weight: 500px;
+    line-height: 1.2;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #555555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Slide Styles */
+.slide {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    justify-content: center; /* Centers the slide content */
+    align-items: center;
+}
+
+.slide.active {
+    display: flex; /* Shown when active */
+}
+
+/* Input Styles */
+textarea, .selfishness-input {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    resize: none;
+    transition: border-color 0.3s ease;
+}
+
+.selfishness-input {
+    height: 50px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.selfishness-input:focus {
+    border-color: #0066cc;
+    outline: none;
+}
+
+/* Button Styles */
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    text-decoration: none;
+    background-color: #0066cc;
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 102, 204, 0.3);
+}
+
+.button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+
+button {
+    background-color: #3498db;
+    color: white;
+    font-size: 0.8rem;
+    padding: 10px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Utility Classes */
+.hidden {
+    display: none;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .buttons {
+        gap: 20px;
+    }
+}
+
+/* Adjusting label positioning for horizontal alignment */
+.label-textbox-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Adds space between label-textbox pairs */
+    margin-right: 10px
+}
+
+.label-textbox-wrapper label {
+    margin-right: 10px;
+    margin-left:10px;
+    white-space: nowrap; /* Prevents label from breaking into multiple lines */
+}
+.hidden {
+    display: none;
+}
