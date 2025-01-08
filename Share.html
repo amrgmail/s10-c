@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مشاركة</title>
     <style>
 body {
@@ -68,7 +68,7 @@ p + textarea {
 }
     </style>
 </head>
-<body>
+<body onload="loadSharedText()">
 <h2 style="text-align: center;">👥🗣 اناقشها مع شخص ما فوراً</h2>
 
     <!-- First Text Box -->
@@ -119,7 +119,7 @@ p + textarea {
 </section>
 
 <!-- Third Text Box -->
-<textarea id="textbox3" style="font-size: 0.8rem; line-height: 1; height: 20px; margin-top: 5px;">شكراً ليك انك سمعتني🙏🏻هل شايف عيوب تانية؟ اني اذيت او محتاج اصلح بشكل مختلف؟ هل حابب تشاركني، تدعي لي، تفكرني بحاجة؟</textarea>
+<textarea id="textbox3" style="font-size: 0.8rem; line-height: 1; height: 10px; margin-top: 5px;">هل فيه حاجة ممكن تضيفها لجردي؟ هل شايف ممكن اصلح بشكل مختلف؟...</textarea>
 
 <!-- Button Group -->
 <div class="button-group">
@@ -194,18 +194,38 @@ function showTemporaryMessage(message, duration) {
         window.open(url, '_blank');
     }
 
-    function goBackToGART() {
-        const sharedText = document.getElementById('SharedText').value;
-        localStorage.setItem('sharedText', sharedText);
-        window.location.href = 'index.html';
-    }
+function goBackToGART() {
+    const sharedText = document.getElementById('SharedText').value; // Shared text box
+    const helpText = document.getElementById('help-text').value; // 3rd text box
+    const acceptanceText = document.getElementById('acceptance-text').value; // 4th text box
 
-    function loadSharedText() {
-        const savedText = localStorage.getItem('sharedText');
-        if (savedText !== null) {
-            document.getElementById('SharedText').value = savedText;
-        }
+    // Save all text to local storage
+    localStorage.setItem('sharedText', sharedText);
+    localStorage.setItem('helpText', helpText);
+    localStorage.setItem('acceptanceText', acceptanceText);
+
+    // Redirect to index.html
+    window.location.href = 'index.html';
+}
+
+
+
+function loadSharedText() {
+    const savedSharedText = localStorage.getItem('sharedText');
+    const savedHelpText = localStorage.getItem('helpText');
+    const savedAcceptanceText = localStorage.getItem('acceptanceText');
+
+    if (savedSharedText !== null) {
+        document.getElementById('SharedText').value = savedSharedText;
     }
+    if (savedHelpText !== null) {
+        document.getElementById('help-text').value = savedHelpText;
+    }
+    if (savedAcceptanceText !== null) {
+        document.getElementById('acceptance-text').value = savedAcceptanceText;
+    }
+}
+
 
     function resetFields() {
     const confirmation = confirm('❌ سيتم مسح كل ما تمت اضافته. هل انت متأكد؟');
