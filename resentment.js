@@ -1,24 +1,6 @@
 let currentSlide = 1;
 
 // Function to update the resentment box dynamically
-function updateResentmentBox() {
-  const person = document.getElementById('resentment-person')?.value.trim();
-  const reason = document.getElementById('resentment-reason')?.value.trim();
-  const effects = Array.from(document.querySelectorAll('#effects input:checked')).map(input => input.value);
-
-  // Construct the dynamic text
-  let dynamicText = '';
-  if (person) dynamicText += `😡 مستاء من: ${person}. `;
-  if (reason) dynamicText += `😡 السبب: ${reason}. `;
-  if (effects.length > 0) dynamicText += `😡 أثر علي: ${effects.join(', ')}`;
-
-  const resentmentBox = document.getElementById('resentment');
-  if (resentmentBox) {
-    // Preserve user's edits and append dynamic text
-    const userInput = resentmentBox.value; // Preserve user-typed text
-    resentmentBox.value = `${userInput}\n${dynamicText}`.trim(); // Combine user input and dynamic content
-  }
-}
 
 
 // Event listeners for dynamically updating the resentment box
@@ -191,41 +173,35 @@ function updateResentmentBox() {
   const reason = document.getElementById('resentment-reason')?.value.trim();
   const effects = Array.from(document.querySelectorAll('#effects input:checked')).map(input => input.value);
 
-// Collect text from slide 2 textboxes with their corresponding labels
-const slide2TextInputs = Array.from(document.querySelectorAll('#slide-2 textarea'));
+  // Collect text from slide 2 textboxes with their corresponding labels and values
+  const slide2TextInputs = Array.from(document.querySelectorAll('#slide-2 textarea'));
 
-const slide2Text = slide2TextInputs
-  .map(input => {
-    // Check for a preceding <label> specifically for dynamically generated fields
-    const dynamicLabel = input.previousElementSibling?.tagName === 'LABEL'
-      ? input.previousElementSibling.textContent.trim()
-      : null;
+  const selfishnessDetails = slide2TextInputs
+    .map(input => {
+      // Check for a preceding <label> specifically for dynamically generated fields
+      const dynamicLabel = input.previousElementSibling?.tagName === 'LABEL'
+        ? input.previousElementSibling.textContent.trim()
+        : null;
 
-    // Fallback to the original logic for other text fields
-    const fallbackLabel = input.closest('.label-textbox-wrapper')?.querySelector('button, p, label')?.textContent.trim();
+      // Fallback to the original logic for other text fields
+      const fallbackLabel = input.closest('.label-textbox-wrapper')?.querySelector('button, p, label')?.textContent.trim();
 
-    let label = dynamicLabel || fallbackLabel || 'Valuer'; // Use dynamicLabel if available, otherwise fallback
+      // Choose the label: dynamicLabel first, fallbackLabel second, or default to 'Valuer'
+      const label = dynamicLabel || fallbackLabel || 'Valuer';
 
-    // Prepend "متعلق ب:" for dynamically generated "أناني" fields
-    if (dynamicLabel) {
-      label = `أناني لأني متعلق ب${label}`;
-    }
-
-    const inputValue = input.value.trim();
-    return inputValue ? `${label}: ${inputValue}` : null; // Precede value with label text
-  })
-  .filter(value => value !== null) // Exclude empty inputs
-  .join('; ');
-
-console.log(slide2Text);
-
+      const inputValue = input.value.trim();
+      return inputValue ? ` - ${label}: ${inputValue}` : null; // Add label and value
+    })
+    .filter(detail => detail !== null); // Exclude empty inputs
 
   // Construct the resentment text
   let resentmentText = '';
   if (person) resentmentText += `😡 مستاء من: ${person}. `;
   if (reason) resentmentText += `😡 السبب: ${reason}. `;
   if (effects.length > 0) resentmentText += `😡 أثر علي: ${effects.join(', ')}. `;
-  if (slide2Text) resentmentText += slide2Text;
+  if (selfishnessDetails.length > 0) {
+    resentmentText += `\nأناني متعلق ب:\n${selfishnessDetails.join('\n')}`; // Add newlines for each label-value pair
+  }
 
   // Update the resentment box
   const resentmentBox = document.getElementById('resentment');
