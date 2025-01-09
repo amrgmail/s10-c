@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>إستياء؟ 😡</title>
   <link rel="stylesheet" href="styles.css">
   <style>
@@ -15,6 +15,12 @@
 }
 textarea, input {
   font-size: 16px; /* Prevents zoom on textboxes in mobile browsers */
+}
+    @supports (-webkit-overflow-scrolling: touch) {
+  input, textarea {
+    font-size: 16px; /* iOS-specific enforcement */
+    appearance: none; /* Normalize rendering */
+  }
 }
 </style>
 </head>
