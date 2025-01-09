@@ -7,51 +7,73 @@
   <title>إستياء؟ 😡</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-  body {
-  margin: 0 auto; /* Centers the content horizontally */
-  padding: 0 1px; /* Adds padding to both sides */
-  max-width: 1200px; /* Restricts the maximum width */
-  font-family: Arial, sans-serif; /* Optional: Set a readable font */
-}
-</style>
+    body {
+      margin: 0 auto; /* Centers the content horizontally */
+      padding: 0 1px; /* Adds padding to both sides */
+      max-width: 1200px; /* Restricts the maximum width */
+      font-family: Arial, sans-serif; /* Optional: Set a readable font */
+    }
+
+    /* Make the resentment text box fixed */
+    .resentment-container {
+      position: fixed;
+      top: 0; /* Fix at the top of the page */
+      left: 0; /* Align to the left */
+      right: 0; /* Align to the right */
+      background-color: #f8f8f8; /* Optional: Add background to distinguish */
+      padding: 10px; /* Add padding for spacing */
+      z-index: 1000; /* Ensure it stays above other elements */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for effect */
+    }
+
+    .resentment-container textarea {
+      width: 100%; /* Make it full width */
+      height: 50px; /* Adjust height as needed */
+      font-size: 15px; /* Adjust font size */
+    }
+
+    .slide {
+      margin-top: 80px; /* Add margin to avoid overlap with fixed container */
+    }
+  </style>
 </head>
+
 <body>
-<div class="resentment-container" style= margin-right: 50px">
+  <div class="resentment-container">
     <label for="resentment"><h1>😡مستاء؟</h1></label>
     <textarea id="resentment" placeholder="جردك هيظهر هنا..."></textarea>
-</div>
+  </div>
 
-    <!-- Slide 1 -->
-    <div class="slide active" id="slide-1">
+  <!-- Slide 1 -->
+  <div class="slide active" id="slide-1">
     <div class="label-textbox-wrapper">
       <label for="resentment-person"><strong>😡من؟</strong></label>
       <textarea id="resentment-person" placeholder="اسم ما انت مستاء تجاهه" style="font-size: 15px;"></textarea>
       <label for="resentment-reason"><strong>😡السبب؟</strong></label>
       <textarea id="resentment-reason" placeholder="اختصر السبب هنا"></textarea>
-      </div>
-      <label for="effects" class="subtitle"><strong>😡و ذلك لأنه اثر علي؟</strong></label>
-     <div id="effects" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 70%;">
-    <label><input type="checkbox" value="قيمتي 🎭">🎭 قيمتي: ما اريد ان اكون عليه</label>
-    <label><input type="checkbox" value="منظري 👀">👀 منظري: ما اريد غيري ان يراني عليه</label>
-    <label><input type="checkbox" value="محفظتي 💰">💰 محفظتي: ممتلكاتي المادية</label>
-    <label><input type="checkbox" value="اماني 🌟">🌟 اماني: ما أطمئن بوجوده ماديا او عاطفيا</label>
-    <label><input type="checkbox" value="خطتي 📅">📅 خطتي: ترتيبي للأحداث</label>
-    <label><input type="checkbox" value="علاقتي الشخصية 👥">👥 علاقتي الشخصية: ما اريد ان يكون غيري عليه</label>
-    <label><input type="checkbox" value="علاقتي الجنسية ❤️">❤️ علاقتي الجنسية: ما اريده للجنس</label>
-</div>
+    </div>
+    <label for="effects" class="subtitle"><strong>😡و ذلك لأنه اثر علي؟</strong></label>
+    <div id="effects" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 70%;">
+      <label><input type="checkbox" value="قيمتي 🎭">🎭 قيمتي: ما اريد ان اكون عليه</label>
+      <label><input type="checkbox" value="منظري 👀">👀 منظري: ما اريد غيري ان يراني عليه</label>
+      <label><input type="checkbox" value="محفظتي 💰">💰 محفظتي: ممتلكاتي المادية</label>
+      <label><input type="checkbox" value="اماني 🌟">🌟 اماني: ما أطمئن بوجوده ماديا او عاطفيا</label>
+      <label><input type="checkbox" value="خطتي 📅">📅 خطتي: ترتيبي للأحداث</label>
+      <label><input type="checkbox" value="علاقتي الشخصية 👥">👥 علاقتي الشخصية: ما اريد ان يكون غيري عليه</label>
+      <label><input type="checkbox" value="علاقتي الجنسية ❤️">❤️ علاقتي الجنسية: ما اريده للجنس</label>
+    </div>
 
-      <h3 class="subtitle" style="text-align: center; color: goldenrod; margin-bottom: 1px"> عندما تظهر هذه، أسألك يا الله في الحال أن تزيلها. 🙏🌟 </h3>
-<p class="content" id="dynamic-content" style="font-size: 0.9re; margin-top: 3px; margin-right: 10px; align-text: center">
-    "أسألك يا الله أن تساعدني على أن أظهر ل 😡 نفس التقبل، الشفقة و الصبر الذي كنت سأمنحه بسرور لصديق مريض". 
-    "😡 شخص مريض. كيف أكون نافعاً له؟ يا رب أنقذني من الغضب. لتكن مشيئتك."
-</p>
-<!-- Button to handle resentment and move to the next slide -->
-<div style="display: flex; justify-content: center; align-items: center; margin-top: 20px;">
-    <button onclick="handleResentmentAndNext()" style="width: 300px; height: 50px; background-color: green; color: white; font-size: 1rem; border: none; border-radius: 5px; text-align: center; align-self: center">
+    <h3 class="subtitle" style="text-align: center; color: goldenrod; margin-bottom: 1px"> عندما تظهر هذه، أسألك يا الله في الحال أن تزيلها. 🙏🌟 </h3>
+    <p class="content" id="dynamic-content" style="font-size: 0.9rem; margin-top: 3px; margin-right: 10px; text-align: center">
+      "أسألك يا الله أن تساعدني على أن أظهر ل 😡 نفس التقبل، الشفقة و الصبر الذي كنت سأمنحه بسرور لصديق مريض". 
+      "😡 شخص مريض. كيف أكون نافعاً له؟ يا رب أنقذني من الغضب. لتكن مشيئتك."
+    </p>
+
+    <div style="display: flex; justify-content: center; align-items: center; margin-top: 20px;">
+      <button onclick="handleResentmentAndNext()" style="width: 300px; height: 50px; background-color: green; color: white; font-size: 1rem; border: none; border-radius: 5px; text-align: center; align-self: center">
         😎 انانيتي؟
-    </button>
-</div>
-</div>
+      </button>
+    </div>
     </div>
     <div id="slide-2" class="slide">
       <h4>😎اين كنت اناني؟ - كيف كنت متعلق ب:</h4>
