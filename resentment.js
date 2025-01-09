@@ -190,7 +190,7 @@ function updateResentmentBox() {
       const label = dynamicLabel || fallbackLabel || 'Valuer';
 
       const inputValue = input.value.trim();
-      return inputValue ? ` - ${label}: ${inputValue}` : null; // Add label and value
+      return inputValue ? `${label}: ${inputValue}` : null; // Remove `-` prefix
     })
     .filter(detail => detail !== null); // Exclude empty inputs
 
@@ -200,13 +200,15 @@ function updateResentmentBox() {
   if (reason) resentmentText += `😡 السبب: ${reason}. `;
   if (effects.length > 0) resentmentText += `😡 أثر علي: ${effects.join(', ')}. `;
   if (selfishnessDetails.length > 0) {
-    resentmentText += `\nأناني متعلق ب:\n${selfishnessDetails.join('\n')}`; // Add newlines for each label-value pair
+    resentmentText += `\nأناني متعلق ب:\n${selfishnessDetails.join('\n')}`; // Add newlines for each label-value pair, no `-`
   }
 
   // Update the resentment box
   const resentmentBox = document.getElementById('resentment');
   if (resentmentBox) resentmentBox.value = resentmentText;
 }
+
+
 
 // Function to attach listeners to all textboxes and checkboxes
 function attachListeners() {
