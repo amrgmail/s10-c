@@ -3,8 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
+  <meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=1.0, user-scalable=no">
   <title>إستياء؟ 😡</title>
   <link rel="stylesheet" href="styles.css">
   <style>
@@ -48,7 +47,7 @@
   border: 1px solid #ddd;
   border-radius: 5px;
   cursor: pointer;
-  color: #333; /* Set font color to visible */;
+  color: #333; /* Set font color to visible */
 }
 
 #dropdown-list {
@@ -79,7 +78,7 @@
 }
 
 #selected-effect {
-  font-size: 12px !important;  /* Decrease the font size */
+  font-size: 3px;  /* Decrease the font size */
   margin-left: 10px; /* Keep some spacing between the button and text */
 }
 
@@ -236,15 +235,6 @@ document.querySelectorAll('.dropdown-option').forEach(option => {
 });
 
 
-document.querySelectorAll('textarea').forEach(textarea => {
-  textarea.addEventListener('focus', function() {
-    document.body.style.overflow = 'hidden';  // Prevent scrolling
-  });
-
-  textarea.addEventListener('blur', function() {
-    document.body.style.overflow = 'auto';  // Restore scrolling when focus is lost
-  });
-});
 
   </script>
 </body>
