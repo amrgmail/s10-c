@@ -14,7 +14,6 @@
       font-family: Arial, sans-serif;
     }
 
-
     .small-margin {
       margin-top: 1px;
       margin-bottom: 1px;
@@ -36,75 +35,73 @@
     .hidden {
       display: none;
     }
-    
-   .dropdown-container {
-  position: relative;
-  display: inline-block;
-}
-#dropdown-btn {
-  padding: 10px;
-  background-color: transparent; /* Clear background */
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  cursor: pointer;
-  color: #333; /* Set font color to visible */
-}
 
-#dropdown-list {
-  display: none;
-  position: absolute;
-  top: 40px;
-  left: 50px;
-  right: 0; /* Position the dropdown on the right edge */
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  width: 250px;
-  max-height: 250px;
-  overflow-y: auto;
-  z-index: 10;
-  font-size: 12px;
-}
+    .dropdown-container {
+      position: relative;
+      display: inline-block;
+    }
 
+    #dropdown-btn {
+      padding: 10px;
+      background-color: transparent;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      cursor: pointer;
+      color: #333;
+    }
 
-#dropdown-list label {
-  display: block;
-  padding: 8px;
-  cursor: pointer;
-}
+    #dropdown-list {
+      display: none;
+      position: absolute;
+      top: 40px;
+      left: 50px;
+      right: 0;
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      width: 250px;
+      max-height: 250px;
+      overflow-y: auto;
+      z-index: 10;
+      font-size: 12px;
+    }
 
-#dropdown-list label:hover {
-  background-color: #f0f0f0;
-}
+    #dropdown-list label {
+      display: block;
+      padding: 8px;
+      cursor: pointer;
+    }
 
-#selected-effect {
-  font-size: 3px;  /* Decrease the font size */
-  margin-left: 10px; /* Keep some spacing between the button and text */
-}
+    #dropdown-list label:hover {
+      background-color: #f0f0f0;
+    }
 
-#selfishness textarea {
-  width: 450px;  /* Adjust width to make them wider */
-  height: 10px;  /* Adjust height to make them shorter (1 line height) */
-  font-size: 14px;  /* You can adjust the font size as well if necessary */
-  margin-bottom: 2px;
-}
+    #selected-effect {
+      font-size: 16px;
+      margin-left: 10px;
+    }
 
-/* Apply float to buttons to move them to the right side */
-.label-textbox-wrapper button {
-  float: right;  /* Move the button to the right */
-  margin-left: 10px;  /* Optional: adds space between buttons */
-  margin-right: 0;    /* Optional: remove space on the right */
-}
+    #selfishness textarea {
+      width: 450px;
+      height: 10px;
+      font-size: 14px;
+      margin-bottom: 2px;
+    }
 
-/* If needed, clear floats to avoid layout issues */
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
-}
+    .label-textbox-wrapper button {
+      float: right;
+      margin-left: 10px;
+    }
 
+    .clearfix::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
 
-
+    .show {
+      display: block !important;
+    }
   </style>
 </head>
 
@@ -114,6 +111,7 @@
       <h1>😡مستاء؟</h1>
     </label>
   </div>
+
   <div>
     <div class="label-textbox-wrapper">
       <label for="resentment-person" class="small-margin"><strong>😡من؟</strong></label>
@@ -121,30 +119,31 @@
       <label for="resentment-reason" class="small-margin"><strong>😡السبب؟</strong></label>
       <textarea id="resentment-reason" placeholder="اختصر السبب هنا" class="small-margin" style="font-size: 16px"></textarea>
     </div>
-<div class="label-textbox-wrapper">
-  <div class="dropdown-container">
-    <button id="dropdown-btn" class="dropdown-btn"><strong>😡 أثر علي؟</strong></button>
-    <div id="dropdown-list" class="dropdown-list">
-      <label><input type="checkbox" class="dropdown-option" value="🎭 قيمتي" data-target="value-textarea"> 🎭 قيمتي: ما اريد ان اكون عليه</label>
-      <label><input type="checkbox" class="dropdown-option" value="👀 منظري" data-target="image-textarea"> 👀 منظري: ما اريد غيري ان يراني عليه</label>
-      <label><input type="checkbox" class="dropdown-option" value="💰 محفظتي" data-target="money-textarea"> 💰 محفظتي: ممتلكاتي المادية</label>
-      <label><input type="checkbox" class="dropdown-option" value="🌟 اماني" data-target="security-textarea"> 🌟 اماني: ما أطمئن بوجوده ماديا او عاطفيا</label>
-      <label><input type="checkbox" class="dropdown-option" value="📅 خطتي" data-target="plan-textarea"> 📅 خطتي: ترتيبي للأحداث</label>
-      <label><input type="checkbox" class="dropdown-option" value="👥 علاقتي الشخصية" data-target="relationship-textarea"> 👥 علاقتي الشخصية: ما اريد ان يكون غيري عليه</label>
-      <label><input type="checkbox" class="dropdown-option" value="❤️ علاقتي الجنسية" data-target="sexual-textarea"> ❤️ علاقتي الجنسية: ما اريده للجنس</label>
+
+    <div class="label-textbox-wrapper">
+      <div class="dropdown-container">
+        <button id="dropdown-btn" class="dropdown-btn"><strong>😡 أثر علي؟</strong></button>
+        <div id="dropdown-list" class="dropdown-list">
+          <label><input type="checkbox" class="dropdown-option" value="🎭 قيمتي" data-target="value-textarea"> 🎭 قيمتي: ما اريد ان اكون عليه</label>
+          <label><input type="checkbox" class="dropdown-option" value="👀 منظري" data-target="image-textarea"> 👀 منظري: ما اريد غيري ان يراني عليه</label>
+          <label><input type="checkbox" class="dropdown-option" value="💰 محفظتي" data-target="money-textarea"> 💰 محفظتي: ممتلكاتي المادية</label>
+          <label><input type="checkbox" class="dropdown-option" value="🌟 اماني" data-target="security-textarea"> 🌟 اماني: ما أطمئن بوجوده ماديا او عاطفيا</label>
+          <label><input type="checkbox" class="dropdown-option" value="📅 خطتي" data-target="plan-textarea"> 📅 خطتي: ترتيبي للأحداث</label>
+          <label><input type="checkbox" class="dropdown-option" value="👥 علاقتي الشخصية" data-target="relationship-textarea"> 👥 علاقتي الشخصية: ما اريد ان يكون غيري عليه</label>
+          <label><input type="checkbox" class="dropdown-option" value="❤️ علاقتي الجنسية" data-target="sexual-textarea"> ❤️ علاقتي الجنسية: ما اريده للجنس</label>
+        </div>
+      </div>
+      <div id="selected-effect" class="selected-effect" style="font-size: 16px; margin-left: 10px;"></div>
     </div>
   </div>
-  <div id="selected-effect" class="selected-effect" style="font-size: 16px; margin-left: 10px;"></div>
-</div>
 
-</div>
-    <button type="button" onclick="toggleVisibility('dynamic-content')" style="text-align: center; color: goldenrod; margin-bottom: 1px; border: none; background: none; cursor: pointer; font-size: 16px;">عندما تظهر هذه، أسألك يا الله في الحال أن تزيلها. 🙏🌟</button>
-    <p class="content hidden" id="dynamic-content" style="font-size: 0.9rem; margin-top: 3px; margin-right: 10px; text-align: center;">
-      "أسألك يا الله أن تساعدني على أن أظهر ل 😡 نفس التقبل، الشفقة و الصبر الذي كنت سأمنحه بسرور لصديق مريض".
-    </p>
-  </div>
-<label style="text-align: right; color: Blue; margin-bottom: 1px; border: none; background: none; cursor: pointer; font-size: 19px;">😎اين كنت اناني - متعلق ب؟</label>
-<div id="selfishness">
+  <button type="button" onclick="toggleVisibility('dynamic-content')" style="text-align: center; color: goldenrod; margin-bottom: 1px; border: none; background: none; cursor: pointer; font-size: 16px;">عندما تظهر هذه، أسألك يا الله في الحال أن تزيلها. 🙏🌟</button>
+  <p class="content hidden" id="dynamic-content" style="font-size: 0.9rem; margin-top: 3px; margin-right: 10px; text-align: center;">
+    "أسألك يا الله أن تساعدني على أن أظهر ل 😡 نفس التقبل، الشفقة و الصبر الذي كنت سأمنحه بسرور لصديق مريض".
+  </p>
+
+  <label style="text-align: right; color: Blue; margin-bottom: 1px; border: none; background: none; cursor: pointer; font-size: 19px;">😎اين كنت اناني - متعلق ب؟</label>
+  <div id="selfishness">
     <textarea id="value-textarea" class="hidden" style="font-size: 16px;" placeholder="🎭 قيمتي: ما أريد أن أكون عليه"></textarea>
     <textarea id="image-textarea" class="hidden" style="font-size: 16px;" placeholder="👀 منظري: ما أريد غيري أن يراني عليه"></textarea>
     <textarea id="money-textarea" class="hidden" style="font-size: 16px;" placeholder="💰 محفظتي: ممتلكاتي المادية"></textarea>
@@ -152,38 +151,39 @@
     <textarea id="plan-textarea" class="hidden" style="font-size: 16px;" placeholder="📅 خطتي: ترتيبي للأحداث"></textarea>
     <textarea id="relationship-textarea" class="hidden" style="font-size: 16px;" placeholder="👥 علاقتي الشخصية: ما أريد أن يكون غيري عليه"></textarea>
     <textarea id="sexual-textarea" class="hidden" style="font-size: 16px;" placeholder="❤️ علاقتي الجنسية: ما أريده للجنس"></textarea>
-</div>
- <button type="button" onclick="toggleVisibility('lying-field')" style="text-align: right; color: Blue; margin-bottom: 1px; border: none; background: none; cursor: pointer; font-size: 16px;">🤥كيف جعلني ذلك اكذب؟</button>
-    <div id="lying-field" class="hidden">
-      <textarea placeholder="تبريري لأنانيتي" style= "width: 450px; height: 10px; font-size: 16px; margin-bottom: 0px"></textarea> </div>
   </div>
-    <button type="button" onclick="toggleVisibility('self-section')" style="text-align: right; color: Blue; margin-top: 1px; border: none; background: none; cursor: pointer; font-size: 16px;">🏃هل جعلني ذلك اسعي وراء الأنا؟</button>
+
+  <button type="button" onclick="toggleVisibility('lying-field')" style="text-align: right; color: Blue; margin-bottom: 1px; border: none; background: none; cursor: pointer; font-size: 16px;">🤥كيف جعلني ذلك اكذب؟</button>
+  <div id="lying-field" class="hidden">
+    <textarea placeholder="تبريري لأنانيتي" style="width: 450px; height: 10px; font-size: 16px; margin-bottom: 0px"></textarea>
+  </div>
+
+  <button type="button" onclick="toggleVisibility('self-section')" style="text-align: right; color: Blue; margin-top: 1px; border: none; background: none; cursor: pointer; font-size: 16px;">🏃هل جعلني ذلك اسعي وراء الأنا؟</button>
   <div id="self-section" class="hidden">
     <div class="label-textbox-wrapper">
-    <textarea id="ego-fields-text" placeholder="قراراو فعل" style="width: 200px; margin-right: 10px; font-size: 16px"></textarea>
-      <p style="margin-right: 5px; font-size: 10px; width: 50px">🛠️و أقوم بالإصلاحات سريعاً إذا كنت آذيت أحد ما </p>
+      <textarea id="ego-fields-text" placeholder="قراراو فعل" style="width: 200px; margin-right: 10px; font-size: 16px"></textarea>
+      <p style="margin-right: 5px; font-size: 10px; width: 50px">🛠️و أقوم بالإصلاحات سريعاً إذا كنت آذيت أحد ما</p>
       <textarea placeholder="ازاي تصلح ده؟" style="margin-left: 8px; width: 160px; font-size: 12px; margin-right: 0px"></textarea>
     </div>
-    </div>
-    </div>
   </div>
-    <button type="button" onclick="toggleVisibility('dynamic-content2')" style="text-align: center; color: goldenrod; margin-bottom: 1px; border: none; background: none; cursor: pointer; font-size: 16px;">عندما تظهر هذه، أسألك يا الله في الحال أن تزيلها. 🙏🌟</button>
+
+  <button type="button" onclick="toggleVisibility('dynamic-content2')" style="text-align: center; color: goldenrod; margin-bottom: 1px; border: none; background: none; cursor: pointer; font-size: 16px;">عندما تظهر هذه، أسألك يا الله في الحال أن تزيلها. 🙏🌟</button>
   <p class="content hidden" id="dynamic-content2" style="font-size: 0.9rem; margin-top: 3px; margin-right: 10px; text-align: center;">
-  "خالقي، أنا الآن لدي العزم علي أنك يجب أن تمتلكني كُلِّي، الصالح و السيء
-  <em style="font-size: smaller;">(تخلي عن كل ما كتبت انك متعلق بيه في الأنانية ليكون كما يريد الله حتي لو عكس ما تريد)</em>.
-  أدعو أنك الآن تزيل مني كل عيب شخصي 😎🤥🏃 يقف في طريق نفعي لك و لرفاقي. امنحني القوة، عندما أخرج من هنا، للقيام بما تأمرني به. آمين."
-</p>
+    "خالقي، أنا الآن لدي العزم علي أنك يجب أن تمتلكني كُلِّي، الصالح و السيء
+    <em style="font-size: smaller;">(تخلي عن كل ما كتبت انك متعلق بيه في الأنانية ليكون كما يريد الله حتي لو عكس ما تريد)</em>.
+    أدعو أنك الآن تزيل مني كل عيب شخصي 😎🤥🏃 يقف في طريق نفعي لك و لرفاقي. امنحني القوة، عندما أخرج من هنا، للقيام بما تأمرني به. آمين."
+  </p>
+
   <button type="button" onclick="toggleVisibility('fear-section')" style="text-align: right; color: Blue; margin-top: 1px; border: none; background: none; cursor: pointer; font-size: 16px;">😰هل جعلني ذلك أخاف؟</button>
   <div id="fear-section" class="hidden">
-    <textarea id="fear-input" placeholder="ايه اللي انت قلقان منه؟" style= "width: 450px; height: 10px; font-size: 16px; margin-bottom: 0px"></textarea>
-      <p class="subtitle" style="text-align: center; color: goldenrod; margin-top: 0px; margin-bottom: 0px; border: none; background: none; cursor: pointer; font-size: 16px;"> عندما تظهر هذه، أسألك يا الله في الحال أن تزيلها. 🙏🌟 </p>
-      <p style="font-size: 0.9rem; margin-top: 0px">أسألك يا رب أن تزيل خوفي من😰و أن توجه انتباهي إلى ما ستريدني أن أكونه.</p>
-    </div>
+    <textarea id="fear-input" placeholder="ايه اللي انت قلقان منه؟" style="width: 450px; height: 10px; font-size: 16px; margin-bottom: 0px"></textarea>
+    <p class="subtitle" style="text-align: center; color: goldenrod; margin-top: 0px; margin-bottom: 0px; border: none; background: none; cursor: pointer; font-size: 16px;"> عندما تظهر هذه، أسألك يا الله في الحال أن تزيلها. 🙏🌟 </p>
+    <p style="font-size: 0.9rem; margin-top: 0px">أسألك يا رب أن تزيل خوفي من😰و أن توجه انتباهي إلى ما ستريدني أن أكونه.</p>
   </div>
-</div>
+
   <div>
-    <button onclick="addAndRedirectToStep10()" style="width: 80px; height: 50px; background-color: green; color: white; font-size: 1rem; border: none; border-radius: 5px; text-align: center;">التالي⏭️</button>
-    <button onclick="addAndRedirectToIndex()" style="width: 150px; height: 50px; background-color: green; color: white; font-size: 1rem; border: none; border-radius: 5px; text-align: center;">جرد موقف تاني🔁</button>
+    <button onclick="collectAndRedirectToShare(event)" style="width: 80px; height: 50px; background-color: green; color: white; font-size: 1rem; border: none; border-radius: 5px; text-align: center;">التالي⏭️</button>
+    <button onclick="collectAndRedirectToIndex(event)" style="width: 150px; height: 50px; background-color: green; color: white; font-size: 1rem; border: none; border-radius: 5px; text-align: center;">جرد موقف تاني🔁</button>
   </div>
 
   <script>
@@ -193,49 +193,71 @@
         element.classList.toggle('hidden');
       }
     }
-    
 
-    function addAndRedirectToIndex() {
-      window.location.href = 'index.html';
-    }
+    // Toggle dropdown visibility
+    document.getElementById('dropdown-btn').addEventListener('click', function() {
+      const dropdown = document.getElementById('dropdown-list');
+      dropdown.classList.toggle('show');
+    });
 
-    function addAndRedirectToStep10() {
+    // Event delegation for checkboxes
+    document.getElementById('dropdown-list').addEventListener('change', function(event) {
+      if (event.target.classList.contains('dropdown-option')) {
+        const option = event.target;
+        const targetTextareaId = option.getAttribute('data-target');
+        const textarea = document.getElementById(targetTextareaId);
+        if (option.checked) {
+          textarea.classList.remove('hidden');
+        } else {
+          textarea.classList.add('hidden');
+        }
+
+        const selectedOptions = Array.from(document.querySelectorAll('.dropdown-option:checked'))
+          .map(option => option.value)
+          .join(', ');
+
+        document.getElementById('selected-effect').textContent = selectedOptions;
+      }
+    });
+
+    // Collect and Redirect function
+    function collectAndRedirectToShare(event) {
+      event.preventDefault();
+
+      console.log('collectAndRedirectToShare button clicked');  // Debug log
+
+      const resentmentPerson = document.getElementById('resentment-person').value || '';
+      const resentmentReason = document.getElementById('resentment-reason').value || '';
+      const selectedEffects = Array.from(document.querySelectorAll('.dropdown-option:checked'))
+        .map(option => option.nextElementSibling.textContent.trim())
+        .join(', ');
+
+      const selfishnessText = collectTextForTextareas(['value-textarea', 'image-textarea', 'money-textarea', 'security-textarea', 'plan-textarea', 'relationship-textarea', 'sexual-textarea']);
+      const lyingText = document.querySelector('#lying-field textarea') ? document.querySelector('#lying-field textarea').value : '';
+      const egoText = document.querySelector('#self-section textarea') ? document.querySelector('#self-section textarea').value : '';
+      const fearText = document.getElementById('fear-input') ? document.getElementById('fear-input').value : '';
+
+      const sharedText = `😡 مستاء من: ${resentmentPerson}. 😡 السبب: ${resentmentReason}. 😡 أثر علي: ${selectedEffects}. ${selfishnessText} 🤥كذب؟: ${lyingText} 🏃 سعي وراء الأنا؟: ${egoText} و أقوم بالإصلاحات سريعاً إذا كنت آذيت أحد ما 🛠️❤️‍🩹: ${egoText} 😱 خوف؟: ${fearText}`;
+      window.localStorage.setItem('sharedText', sharedText);
       window.location.href = '/Share.html';
     }
 
-document.getElementById('dropdown-btn').addEventListener('click', function() {
-  const dropdown = document.getElementById('dropdown-list');
-  dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
-});
+    function collectAndRedirectToIndex(event) {
+      event.preventDefault();
 
-
-document.querySelectorAll('.dropdown-option').forEach(option => {
-  option.addEventListener('change', function () {
-    // Get the target textarea ID from the data-target attribute of the checkbox
-    const targetTextareaId = option.getAttribute('data-target');
-
-    // Get the corresponding textarea element by ID
-    const textarea = document.getElementById(targetTextareaId);
-
-    // Show or hide the textarea based on whether the checkbox is checked
-    if (option.checked) {
-      textarea.classList.remove('hidden'); // Show the textarea
-    } else {
-      textarea.classList.add('hidden'); // Hide the textarea
+      console.log('collectAndRedirectToIndex button clicked');  // Debug log
+      // Handle similar functionality to collectAndRedirectToShare...
     }
 
-    // Update the selected options text (showing emoji along with the text)
-    const selectedOptions = Array.from(document.querySelectorAll('.dropdown-option:checked'))
-      .map(option => option.value)  // Get the entire value (emoji + text)
-      .join(', ');  // Join all selected options into a string
-    
-    const displayElement = document.getElementById('selected-effect');
-    displayElement.textContent = selectedOptions;  // Display the selected options with emojis
-  });
-});
-
-
-
+    function collectTextForTextareas(ids) {
+      return ids
+        .map(id => {
+          const textarea = document.getElementById(id);
+          return textarea && textarea.value ? `أناني لأني متعلق بـ ${textarea.placeholder}: ${textarea.value}` : '';
+        })
+        .filter(text => text.length > 0)
+        .join('; ');
+    }
   </script>
 </body>
 
