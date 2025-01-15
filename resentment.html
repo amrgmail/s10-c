@@ -8,64 +8,67 @@
   <link rel="stylesheet" href="styles.css">
   <style>
     body {
-      margin: 0 auto;
-      padding: 0 1px;
-      max-width: 1200px;
-      font-family: Arial, sans-serif;
-    }
+  margin: 0;
+  padding: 0 1rem;
+  font-family: Arial, sans-serif;
+  max-width: 100%;
+}
 
+.small-margin {
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
 
-    .small-margin {
-      margin-top: 1px;
-      margin-bottom: 1px;
-    }
+.grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  font-size: 60%;
+}
 
-    .grid-layout {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 10px;
-      font-size: 60%;
-    }
+textarea {
+  width: 100%;
+  max-width: 300px;
+  height: 20px;
+  font-size: 14px;
+  margin-bottom: 0.5rem;
+}
 
-    textarea {
-      width: 300px;
-      height: 20px;
-      font-size: 14px;
-    }
+.hidden {
+  display: none;
+}
 
-    .hidden {
-      display: none;
-    }
-    
-   .dropdown-container {
+.dropdown-container {
   position: relative;
   display: inline-block;
+  width: 100%;
 }
+
 #dropdown-btn {
   padding: 10px;
-  background-color: transparent; /* Clear background */
+  background-color: transparent;
   border: 1px solid #ddd;
   border-radius: 5px;
   cursor: pointer;
-  color: #333; /* Set font color to visible */
+  color: #333;
+  width: 100%;
 }
 
 #dropdown-list {
   display: none;
   position: absolute;
   top: 40px;
-  left: 50px;
-  right: 0; /* Position the dropdown on the right edge */
+  left: 0;
+  right: 0;
   background-color: white;
   border: 1px solid #ddd;
   border-radius: 5px;
-  width: 250px;
+  width: 100%;
   max-height: 250px;
   overflow-y: auto;
   z-index: 10;
   font-size: 12px;
 }
-
 
 #dropdown-list label {
   display: block;
@@ -78,33 +81,69 @@
 }
 
 #selected-effect {
-  font-size: 3px;  /* Decrease the font size */
-  margin-left: 10px; /* Keep some spacing between the button and text */
+  font-size: 1rem;
+  margin-left: 10px;
 }
 
-#selfishness textarea {
-  width: 450px;  /* Adjust width to make them wider */
-  height: 10px;  /* Adjust height to make them shorter (1 line height) */
-  font-size: 14px;  /* You can adjust the font size as well if necessary */
-  margin-bottom: 2px;
+textarea#selfishness textarea {
+  width: 100%;
+  max-width: 450px;
+  height: 10px;
+  font-size: 14px;
+  margin-bottom: 0.5rem;
 }
 
-/* Apply float to buttons to move them to the right side */
 .label-textbox-wrapper button {
-  float: right;  /* Move the button to the right */
-  margin-left: 10px;  /* Optional: adds space between buttons */
-  margin-right: 0;    /* Optional: remove space on the right */
+  float: right;
+  margin-left: 10px;
+  margin-right: 0;
 }
 
-/* If needed, clear floats to avoid layout issues */
 .clearfix::after {
   content: "";
   display: table;
   clear: both;
 }
 
+@media (max-width: 600px) {
+  body {
+    padding: 0 1rem;
+  }
 
+  .grid-layout {
+    grid-template-columns: 1fr;
+    /* Stack the grid items for smaller screens */
+  }
 
+  textarea {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .dropdown-container {
+    width: 100%;
+  }
+
+  #dropdown-btn {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  #dropdown-list {
+    left: 0;
+    width: 100%;
+  }
+
+  .label-textbox-wrapper button {
+    width: 100%;
+    /* Full-width buttons for small screens */
+    font-size: 14px;
+  }
+
+  .content {
+    font-size: 14px;
+  }
+}
   </style>
 </head>
 
