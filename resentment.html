@@ -236,6 +236,15 @@ document.querySelectorAll('.dropdown-option').forEach(option => {
 });
 
 
+document.querySelectorAll('textarea').forEach(textarea => {
+  textarea.addEventListener('focus', function() {
+    document.body.style.overflow = 'hidden';  // Prevent scrolling
+  });
+
+  textarea.addEventListener('blur', function() {
+    document.body.style.overflow = 'auto';  // Restore scrolling when focus is lost
+  });
+});
 
   </script>
 </body>
